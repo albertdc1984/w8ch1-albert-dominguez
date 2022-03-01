@@ -1,4 +1,4 @@
-const PokemonSsr = ({ results }) => {
+const Pokemon = ({ results }) => {
   return (
     <>
       {results.map((pokemon) => (
@@ -8,10 +8,10 @@ const PokemonSsr = ({ results }) => {
   );
 };
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const res = await fetch("https://pokeapi.co/api/v2/pokemon/?limit=10");
   const { results } = await res.json();
   return { props: { results } };
 };
 
-export default PokemonSsr;
+export default Pokemon;

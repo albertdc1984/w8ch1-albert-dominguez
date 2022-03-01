@@ -8,7 +8,7 @@ const Navigator = () => {
       <nav>
         <ul className={styles.list}>
           <li key="1">
-            <Link href="/home">
+            <Link href="/">
               <a>Home</a>
             </Link>
           </li>
@@ -18,17 +18,17 @@ const Navigator = () => {
             </Link>
           </li>
           <li key="3">
-            <Link href="/pokemon-ssg">
+            <Link href="/pokessg">
               <a>Mis pokémon SSG</a>
             </Link>
           </li>
           <li key="4">
-            <Link href="/pokemon-ssr">
+            <Link href="/pokessr">
               <a>Mis pokémon SSR</a>
             </Link>
           </li>
           <li key="5">
-            <Link href="/pokemon-ssr">
+            <Link href="/pokeisr">
               <a>Mis pokémon ISR</a>
             </Link>
           </li>

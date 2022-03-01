@@ -13,3 +13,5 @@ export const getStaticProps = async () => {
   const { results } = await res.json();
   return { props: { results } };
 };
+
+export default PokemonSsg;
