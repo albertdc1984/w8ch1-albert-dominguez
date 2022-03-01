@@ -6,3 +6,5 @@ const PokeCard = (pokemon) => {
     </div>
   );
 };
+
+export default PokeCard;
