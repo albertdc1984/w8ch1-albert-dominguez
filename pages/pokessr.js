@@ -13,3 +13,5 @@ export const getServerSideProps = async () => {
   const { results } = await res.json();
   return { props: { results } };
 };
+
+export default PokemonSsr;
