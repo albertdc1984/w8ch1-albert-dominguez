@@ -1,6 +1,6 @@
 import PokeList from "../components/PokeList/PokeList";
 
-const PokemonSsg = ({ pokemonsAPI }) => {
+const PokemonSsr = ({ pokemonsAPI }) => {
   return (
     <>
       <h1>POKEMONS SSR</h1>
@@ -22,4 +22,4 @@ export const getServerSideProps = async () => {
   return { props: { pokemonsAPI } };
 };
 
-export default PokemonSsg;
+export default PokemonSsr;
