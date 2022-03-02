@@ -1,17 +1,25 @@
-const PokemonSsg = ({ results }) => {
+import PokeList from "../components/PokeList/PokeList";
+
+const PokemonSsg = ({ pokemonsAPI }) => {
   return (
     <>
-      {results.map((pokemon) => (
-        <p key={pokemon.name}>{pokemon.name}</p>
-      ))}
+      <h1>POKEMONS SSG</h1>
+      <PokeList pokemons={pokemonsAPI} />
     </>
   );
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch("https://pokeapi.co/api/v2/pokemon/?limit=10");
-  const { results } = await res.json();
-  return { props: { results } };
+  const res = await fetch(process.env.NEXT_PUBLIC_POKEAPI);
+  const results = await res.json();
+  const pokemonPromises = Promise.all(
+    results.results.map((pokemon) =>
+      fetch(pokemon.url).then((response) => response.json())
+    )
+  );
+  const pokemonsAPI = await pokemonPromises;
+
+  return { props: { pokemonsAPI } };
 };
 
 export default PokemonSsg;
