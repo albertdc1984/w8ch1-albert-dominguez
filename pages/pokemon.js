@@ -1,17 +1,28 @@
-const Pokemon = ({ results }) => {
+import { useEffect, useState } from "react";
+import PokeList from "../components/PokeList/PokeList";
+
+const Pokemon = () => {
+  const [pokemons, setPokemons] = useState();
+
+  useEffect(() => {
+    (async () => {
+      const response = await fetch(process.env.NEXT_PUBLIC_POKEAPI);
+      const pokeResponse = await response.json();
+      const pokemonPromises = Promise.all(
+        pokeResponse.results.map((pokemon) =>
+          fetch(pokemon.url).then((response) => response.json())
+        )
+      );
+      const pokemonsAPI = await pokemonPromises;
+      setPokemons(pokemonsAPI);
+    })();
+  }, []);
+
   return (
     <>
-      {results.map((pokemon) => (
-        <p key={pokemon.name}>{pokemon.name}</p>
-      ))}
+      <h1>POKEMONS</h1>
+      {pokemons && <PokeList pokemons={pokemons} />}
     </>
   );
 };
-
-export const getStaticProps = async () => {
-  const res = await fetch("https://pokeapi.co/api/v2/pokemon/?limit=10");
-  const { results } = await res.json();
-  return { props: { results } };
-};
-
 export default Pokemon;
