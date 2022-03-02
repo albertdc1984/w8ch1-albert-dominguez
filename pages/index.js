@@ -12,10 +12,11 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <img
+        <Image
           src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1c393d42-03c6-4fe5-b308-8d37967992d9/dbdzce0-3e4a8e40-59eb-4dbe-97ff-bf2950d722e0.png/v1/fill/w_600,h_546,strp/render__29__pokemon__by_d_iara_dbdzce0-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTQ2IiwicGF0aCI6IlwvZlwvMWMzOTNkNDItMDNjNi00ZmU1LWIzMDgtOGQzNzk2Nzk5MmQ5XC9kYmR6Y2UwLTNlNGE4ZTQwLTU5ZWItNGRiZS05N2ZmLWJmMjk1MGQ3MjJlMC5wbmciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.ecnNNX_XDk8BI36hJWWrcEPzcODXpVI4mPnUYxDfbZc"
           alt="Evil Monster"
           width="700px"
+          height="700px"
         />
         Pokemons are wild creatures that eat human flesh. They are so annoying
         and live almost everywhere. If you find one you may try to catch it with
