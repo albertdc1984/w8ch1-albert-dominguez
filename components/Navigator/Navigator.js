@@ -7,27 +7,27 @@ const Navigator = () => {
       <h1 className={styles.title}>Pokemons Next</h1>
       <nav>
         <ul className={styles.list}>
-          <li key="1">
+          <li key="1" className={styles.li}>
             <Link href="/">
               <a>Home</a>
             </Link>
           </li>
-          <li key="2">
+          <li key="2" className={styles.li}>
             <Link href="/pokemon">
               <a>Pokemon</a>
             </Link>
           </li>
-          <li key="3">
+          <li key="3" className={styles.li}>
             <Link href="/pokessg">
               <a>Mis pokémon SSG</a>
             </Link>
           </li>
-          <li key="4">
+          <li key="4" className={styles.li}>
             <Link href="/pokessr">
               <a>Mis pokémon SSR</a>
             </Link>
           </li>
-          <li key="5">
+          <li key="5" className={styles.li}>
             <Link href="/pokeisr">
               <a>Mis pokémon ISR</a>
             </Link>
