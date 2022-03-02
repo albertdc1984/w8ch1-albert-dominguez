@@ -3,7 +3,7 @@ import PokeList from "../components/PokeList/PokeList";
 const PokemonIsr = ({ pokemonsAPI }) => {
   return (
     <>
-      <h1>POKEMONS SSG</h1>
+      <h1>POKEMONS ISR</h1>
       <PokeList pokemons={pokemonsAPI} />
     </>
   );
